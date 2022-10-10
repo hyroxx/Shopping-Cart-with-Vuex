@@ -38,7 +38,7 @@ export default {
     },
     methods:{
         addToCard(product){
-            if (document.getElementById(product.id).value > 1){
+            if (document.getElementById(product.id).value >= 1){
                 const count = document.getElementById(product.id).value;
                 product={...product,count};
                 this.$store.commit('addToCard',product);
